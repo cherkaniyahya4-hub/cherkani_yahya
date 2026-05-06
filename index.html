@@ -1,1640 +1,133 @@
-<!doctype html>
-<html lang="fr" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Yahya Cherkani — Développeur Full-Stack. Portfolio minimaliste de projets web modernes."
-    />
-    <meta name="author" content="Yahya Cherkani" />
-    <title>Yahya Cherkani — Développeur Full-Stack</title>
+<!-- Geist : police officielle du design Vercel -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
 
-    <!-- Geist : police officielle du design Vercel -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <!-- ================= GRID BACKGROUND ================= -->
-    <div class="grid-bg" aria-hidden="true"></div>
+<!-- ================= HEADER / NAVBAR ================= -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#home" class="logo" aria-label="Accueil">
+      <svg
+        class="logo__mark"
+        viewBox="0 0 24 24"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M12 2 L22 20 H2 Z" fill="currentColor" />
+      </svg>
+      <span class="logo__text">Yahya</span>
+    </a>
 
-    <!-- ================= HEADER / NAVBAR ================= -->
-    <header class="header" id="header">
-      <div class="container header__inner">
-        <a href="#home" class="logo" aria-label="Accueil">
-          <svg
-            class="logo__mark"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path d="M12 2 L22 20 H2 Z" fill="currentColor" />
-          </svg>
-          <span class="logo__text">Yahya</span>
-        </a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#experience" class="nav__link">Experience</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#projects" class="nav__link">Projects</a></li>
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li>
+          <a href="#certifications" class="nav__link">Certifications</a>
+        </li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
 
-        <nav class="nav" id="nav" aria-label="Navigation principale">
-          <ul class="nav__list">
-            <li><a href="#home" class="nav__link">Home</a></li>
-            <li><a href="#about" class="nav__link">About</a></li>
-            <li><a href="#experience" class="nav__link">Experience</a></li>
-            <li><a href="#skills" class="nav__link">Skills</a></li>
-            <li><a href="#projects" class="nav__link">Projects</a></li>
-            <li><a href="#education" class="nav__link">Education</a></li>
-            <li>
-              <a href="#certifications" class="nav__link">Certifications</a>
-            </li>
-            <li><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="header__actions">
+      <!-- Bouton FR / EN -->
+      <button
+        class="lang-toggle"
+        id="langToggle"
+        type="button"
+        aria-label="Changer la langue"
+      >
+        <span class="lang-toggle__text">FR</span>
+        <span class="lang-toggle__knob"></span>
+      </button>
 
-        <div class="header__actions">
-          <!-- Bouton FR / EN -->
-          <button
-            class="lang-toggle"
-            id="langToggle"
-            type="button"
-            aria-label="Changer la langue"
-          >
-            <span class="lang-toggle__text">FR</span>
-            <span class="lang-toggle__knob"></span>
-          </button>
-
-          <!-- Bouton Light / Dark -->
-          <button
-            class="theme-toggle"
-            id="themeToggle"
-            type="button"
-            aria-label="Changer le thème"
-          >
-            <svg
-              class="icon icon--sun"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <circle cx="12" cy="12" r="4" />
-              <path
-                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
-              />
-            </svg>
-
-            <svg
-              class="icon icon--moon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          </button>
-
-          <!-- Bouton menu mobile -->
-          <button
-            class="menu-toggle"
-            id="menuToggle"
-            type="button"
-            aria-label="Ouvrir le menu"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- ================= HERO ================= -->
-      <section class="hero section" id="home">
-        <div class="container hero__inner">
-          <div class="hero-layout reveal">
-            <!-- Socials -->
-            <div class="hero-socials">
-              <a
-                href="https://www.linkedin.com/in/yahyacherkani/"
-                target="_blank"
-                rel="noopener"
-                class="hero-social-link"
-                aria-label="LinkedIn"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.22 0z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://github.com/cherkaniyahya4-hub"
-                target="_blank"
-                rel="noopener"
-                class="hero-social-link"
-                aria-label="GitHub"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="mailto:cherkaniyahya4@gmail.com"
-                class="hero-social-link"
-                aria-label="Email"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="4" width="20" height="16" rx="2" />
-                  <path d="m22 7-10 6L2 7" />
-                </svg>
-              </a>
-            </div>
-
-            <!-- Content -->
-            <div class="hero-main">
-              <h1 class="hero-title">
-                <span class="line">Yahya</span>
-                <span class="line accent">Cherkani.</span>
-              </h1>
-
-              <p class="hero-role">
-                <span class="role-line"></span>
-                <span>Développeur Full-Stack · Étudiant en BTS</span>
-              </p>
-
-              <p class="hero-desc">
-                Je conçois des applications web modernes et performantes, avec
-                une attention particulière portée à la structure du code, à
-                l'expérience utilisateur et à l'amélioration continue.
-              </p>
-
-              <div class="hero-stack">
-                <span class="hero-stack-title">Stack</span>
-                <span class="hero-stack-separator">|</span>
-                <div class="hero-stack-icons">
-                  <div class="hero-stack-icon" title="React">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                      alt="React"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="hero-stack-icon" title="FastAPI">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                      alt="FastAPI"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="hero-stack-icon" title="Supabase">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
-                      alt="Supabase"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="hero-stack-icon" title="Cloud">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M18.42 9.22a6.003 6.003 0 0 0-11.38 0 4.5 4.5 0 0 0 .46 8.98h.5v-.01h10a4.5 4.5 0 0 0 .42-8.97z"
-                      />
-                    </svg>
-                  </div>
-                  <div class="hero-stack-icon" title="MySQL">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                      alt="MySQL"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Photo -->
-            <div class="hero-photo-wrapper">
-              <img
-                src="images/yahyaa.jpeg"
-                alt="Portrait de Yahya Cherkani"
-                class="hero-photo"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-
-        <a
-          href="#about"
-          class="scroll-indicator"
-          aria-label="Défiler vers le bas"
+      <!-- Bouton Light / Dark -->
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Changer le thème"
+      >
+        <svg
+          class="icon icon--sun"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
         >
-          <span>scroll</span>
-          <span class="scroll-indicator__line"></span>
-        </a>
-      </section>
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+          />
+        </svg>
 
-      <!-- ================= ABOUT ================= -->
-      <section class="section" id="about">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">01</span>
-            <h2 class="section__title">À propos</h2>
-            <p class="section__sub">Passion &amp; expertise.</p>
-          </div>
+        <svg
+          class="icon icon--moon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
 
-          <div class="about">
-            <div class="about__media reveal">
-              <div class="about__photo">
-                <img
-                  src="https://cherkani.netlify.app/yahyaa.jpeg"
-                  alt="Portrait de Yahya Cherkani"
-                  loading="lazy"
-                />
-              </div>
-              <div class="about__badge">
-                <span class="about__badge-dot"></span>
-                Disponible · Temps plein
-              </div>
-            </div>
+      <!-- Bouton menu mobile -->
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-            <div class="about__content">
-              <p class="about__text reveal">
-                Développeur full-stack en formation, passionné par la création
-                d’applications web modernes et le développement de solutions
-                numériques performantes. Je porte une attention particulière à
-                la conception de projets bien structurés et à l’amélioration
-                continue de mes compétences en génie logiciel.
-              </p>
-              <p class="about__text reveal">
-                Technicien logiciel spécialisé dans le développement
-                d’applications cloud et de systèmes de surveillance. Expertise
-                en FastAPI et architecture robuste.
-              </p>
-
-              <div class="stats">
-                <div class="stat reveal">
-                  <div class="stat__value">1<span>an</span></div>
-                  <div class="stat__label">d’expérience</div>
-                </div>
-                <div class="stat reveal">
-                  <div class="stat__value">9<span>+</span></div>
-                  <div class="stat__label">projets réalisés</div>
-                </div>
-                <div class="stat reveal">
-                  <div class="stat__value">∞</div>
-                  <div class="stat__label">curiosité</div>
-                </div>
-              </div>
-
-              <a
-                class="btn btn--primary reveal"
-                href="https://cherkani.netlify.app/cherkani.pdf"
-                target="_blank"
-                rel="noopener"
-              >
-                Télécharger le CV
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                  <polyline points="7 10 12 15 17 10" />
-                  <line x1="12" y1="15" x2="12" y2="3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= EXPERIENCE ================= -->
-      <section class="section" id="experience">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">02</span>
-            <h2 class="section__title">Expérience</h2>
-            <p class="section__sub">Parcours professionnel &amp; missions.</p>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item reveal">
-              <div class="timeline-item__marker"></div>
-              <div class="timeline-item__content">
-                <div class="timeline-item__meta">
-                  <span class="timeline-item__date">2024 — Présent</span>
-                  <span class="timeline-item__type">Formation</span>
-                </div>
-                <h3 class="timeline-item__title">
-                  Étudiant en BTS · Développement Full-Stack
-                </h3>
-                <p class="timeline-item__place">
-                  BTS — Développement Web &amp; Applications
-                </p>
-                <p class="timeline-item__desc">
-                  Conception et développement d’applications web modernes :
-                  front-end (HTML/CSS/JS, React), back-end (PHP, FastAPI, C#),
-                  bases de données (MySQL, SQL Server) et méthodes agiles.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal">
-              <div class="timeline-item__marker"></div>
-              <div class="timeline-item__content">
-                <div class="timeline-item__meta">
-                  <span class="timeline-item__date">2024</span>
-                  <span class="timeline-item__type">Projet</span>
-                </div>
-                <h3 class="timeline-item__title">
-                  Technicien logiciel · Applications cloud
-                </h3>
-                <p class="timeline-item__place">
-                  Projets personnels &amp; académiques
-                </p>
-                <p class="timeline-item__desc">
-                  Développement d’applications cloud et de systèmes de
-                  surveillance. Expertise en FastAPI, architecture robuste et
-                  traçabilité des données.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= SKILLS ================= -->
-      <section class="section" id="skills">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">03</span>
-            <h2 class="section__title">Compétences</h2>
-            <p class="section__sub">Ma boîte à outils technique.</p>
-          </div>
-
-          <!-- Languages -->
-          <div class="skills-category reveal">
-            <h3 class="skills-category-title" data-category="languages">
-              <span>Languages</span>
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Python</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Java</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">JavaScript</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">C</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">PHP</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">C#</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Frontend -->
-          <div class="skills-category reveal">
-            <h3 class="skills-category-title" data-category="frontend">
-              <span>Frontend</span>
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">HTML5</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">CSS3</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">React</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Tailwind CSS</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Bootstrap</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Vite</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Backend -->
-          <div class="skills-category reveal">
-            <h3 class="skills-category-title" data-category="backend">
-              <span>Backend</span>
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">FastAPI</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <svg
-                    class="skill-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
-                    />
-                    <path
-                      d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
-                    />
-                  </svg>
-                </div>
-                <span class="skill-name">REST APIs</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <svg
-                    class="skill-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="2" y="2" width="9" height="9" rx="1" />
-                    <rect x="13" y="2" width="9" height="9" rx="1" />
-                    <rect x="2" y="13" width="9" height="9" rx="1" />
-                    <rect x="13" y="13" width="9" height="9" rx="1" />
-                  </svg>
-                </div>
-                <span class="skill-name">Microservices</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Spring Boot</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Node.js</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Express.js</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">GraphQL</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Databases -->
-          <div class="skills-category reveal">
-            <h3 class="skills-category-title" data-category="databases">
-              <span>Databases</span>
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Oracle DB</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">MySQL</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">MongoDB</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <svg
-                    class="skill-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <ellipse cx="12" cy="5" rx="9" ry="3" />
-                    <path d="M3 5v14a9 3 0 0 0 18 0V5" />
-                    <path d="M3 12a9 3 0 0 0 18 0" />
-                  </svg>
-                </div>
-                <span class="skill-name">SQL</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <svg
-                    class="skill-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                </div>
-                <span class="skill-name">PL/SQL</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Redis</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- DevOps & Cloud -->
-          <div class="skills-category reveal">
-            <h3 class="skills-category-title" data-category="devops">
-              <span>DevOps &amp; Cloud</span>
-            </h3>
-            <div class="skills-grid">
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">OCI</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Docker</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Kubernetes</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">CI/CD</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">Git</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <svg
-                    class="skill-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <polygon points="12 2 2 7 12 12 22 7 12 2" />
-                    <polyline points="2 17 12 22 22 17" />
-                    <polyline points="2 12 12 17 22 12" />
-                  </svg>
-                </div>
-                <span class="skill-name">System Design</span>
-              </div>
-              <div class="skill-card">
-                <div class="skill-icon-box">
-                  <img
-                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
-                    alt=""
-                    class="skill-icon"
-                    loading="lazy"
-                  />
-                </div>
-                <span class="skill-name">GCP</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= PROJECTS ================= -->
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">04</span>
-            <h2 class="section__title">Projets</h2>
-            <p class="section__sub">
-              Réalisations récentes &amp; études de cas.
-            </p>
-          </div>
-
-          <!-- Filtres -->
-          <div class="project-filters reveal">
-            <button class="project-filter-btn is-active" data-filter="all">
-              All
-            </button>
-            <button class="project-filter-btn" data-filter="web">Web</button>
-            <button class="project-filter-btn" data-filter="app">App</button>
-            <button class="project-filter-btn" data-filter="desktop">
-              Desktop
-            </button>
-          </div>
-
-          <div class="projects-grid">
-            <!-- ============== Projet 1 : Eco Tracker ============== -->
-            <article
-              class="project-card project-card--ecotracker reveal"
-              data-category="web"
-            >
-              <!-- Slider Eco Tracker (PAS de badge "En cours" — projet live) -->
-              <div class="project-slider project-slider--eco">
-                <div class="project-slider__viewport">
-                  <div class="project-slider__track">
-                    <img
-                      src="images/1.png"
-                      alt="Eco Tracker - page principale"
-                      loading="lazy"
-                    />
-                    <img
-                      src="images/2.png"
-                      alt="Eco Tracker - dashboard"
-                      loading="lazy"
-                    />
-                    <img
-                      src="images/eco.png"
-                      alt="Eco Tracker - vue responsive"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <button
-                  class="project-slider__btn project-slider__btn--prev"
-                  type="button"
-                  aria-label="Image précédente"
-                >
-                  ‹
-                </button>
-
-                <button
-                  class="project-slider__btn project-slider__btn--next"
-                  type="button"
-                  aria-label="Image suivante"
-                >
-                  ›
-                </button>
-
-                <div
-                  class="project-slider__dots"
-                  aria-label="Navigation du slider"
-                ></div>
-              </div>
-
-              <!-- Contenu -->
-              <div class="project-content">
-                <div class="project-content-top">
-                  <p class="project-kicker">WEB APP / DASHBOARD</p>
-                  <h3 class="project-title">Eco Tracker</h3>
-                </div>
-
-                <p class="project-description">
-                  Eco Tracker est une application web moderne permettant de
-                  suivre et visualiser son impact écologique. Le site propose
-                  une interface claire, responsive et professionnelle avec une
-                  expérience utilisateur simple et orientée données.
-                </p>
-
-                <div class="project-techs" aria-label="Technologies utilisées">
-                  <div class="project-tech-icon" title="HTML5">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                      alt="HTML5"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="project-tech-icon" title="CSS3">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                      alt="CSS3"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="project-tech-icon" title="JavaScript">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                      alt="JavaScript"
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <div class="project-tech-icon" title="Supabase">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
-                      alt="Supabase"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <div class="project-footer">
-                  <div class="project-actions">
-                    <a
-                      href="https://ecotracker-mvp.vercel.app"
-                      class="project-action-btn project-action-btn--live"
-                      aria-label="Voir le site Eco Tracker"
-                      title="Live Demo"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        stroke="none"
-                        aria-hidden="true"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </a>
-
-                    <span
-                      class="project-action-btn project-action-btn--disabled"
-                      aria-label="Code bientôt disponible"
-                      title="Code bientôt disponible"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                        />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- ============== Projet 2 : Music Sync ============== -->
-            <article class="project-card reveal" data-category="web">
-              <div class="project-slider">
-                <span
-                  class="project-status project-status--progress"
-                  data-i18n="projectInProgress"
-                  >En cours</span
-                >
-                <div class="project-slider__track">
-                  <img
-                    src="images/imagee.png"
-                    alt="Real-time Music Sync interface"
-                    loading="lazy"
-                  />
-                </div>
-                <button
-                  class="project-slider__btn project-slider__btn--prev"
-                  type="button"
-                  aria-label="Image précédente"
-                >
-                  ‹
-                </button>
-                <button
-                  class="project-slider__btn project-slider__btn--next"
-                  type="button"
-                  aria-label="Image suivante"
-                >
-                  ›
-                </button>
-                <div class="project-slider__dots"></div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-content-top">
-                  <p class="project-kicker">Web App · Realtime</p>
-                  <h3 class="project-title">
-                    Real-time Music Sync with Friends &amp; Chat
-                  </h3>
-                </div>
-
-                <p class="project-description">
-                  Application collaborative en temps réel avec lecture musicale
-                  synchronisée, chat live, files d’attente partagées et
-                  interface moderne orientée expérience utilisateur.
-                </p>
-
-                <div class="project-techs">
-                  <div class="project-tech-icon" title="React">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                      alt="React"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-tech-icon" title="Supabase">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
-                      alt="Supabase"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <div class="project-footer">
-                  <div class="project-actions">
-                    <a
-                      href="#"
-                      class="project-action-btn project-action-btn--video"
-                      aria-label="Vidéo de démo"
-                      title="Démo"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        stroke="none"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </a>
-                    <a
-                      href="https://github.com/cherkaniyahya4-hub"
-                      class="project-action-btn project-action-btn--github"
-                      aria-label="Voir le code sur GitHub"
-                      title="GitHub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- ============== Projet 3 : Faculté de Médecine ============== -->
-            <article class="project-card reveal" data-category="app">
-              <div class="project-slider">
-                <span
-                  class="project-status project-status--progress"
-                  data-i18n="projectInProgress"
-                  >En cours</span
-                >
-                <div class="project-slider__track">
-                  <img
-                    src="images/imagee.png"
-                    alt="Gestion de la faculté de médecine"
-                    loading="lazy"
-                  />
-                </div>
-                <button
-                  class="project-slider__btn project-slider__btn--prev"
-                  type="button"
-                  aria-label="Image précédente"
-                >
-                  ‹
-                </button>
-                <button
-                  class="project-slider__btn project-slider__btn--next"
-                  type="button"
-                  aria-label="Image suivante"
-                >
-                  ›
-                </button>
-                <div class="project-slider__dots"></div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-content-top">
-                  <p class="project-kicker">Mobile · Web App</p>
-                  <h3 class="project-title">
-                    Gestion de la faculté de médecine
-                  </h3>
-                </div>
-
-                <p class="project-description">
-                  Plateforme web et mobile pour organiser les annonces, devoirs,
-                  ressources pédagogiques et échanges entre professeurs et
-                  étudiants.
-                </p>
-
-                <div class="project-techs">
-                  <div class="project-tech-icon" title="React">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                      alt="React"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-tech-icon" title="Java">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-                      alt="Java"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-tech-icon" title="Spring Boot">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
-                      alt="Spring Boot"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <div class="project-footer">
-                  <div class="project-actions">
-                    <a
-                      href="#"
-                      class="project-action-btn project-action-btn--live"
-                      aria-label="Démo live"
-                      title="Live"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <circle cx="12" cy="12" r="10" />
-                        <line x1="2" y1="12" x2="22" y2="12" />
-                        <path
-                          d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                        />
-                      </svg>
-                    </a>
-                    <a
-                      href="https://github.com/cherkaniyahya4-hub"
-                      class="project-action-btn project-action-btn--github"
-                      aria-label="GitHub"
-                      title="GitHub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- ============== Projet 4 : Restaurants ============== -->
-            <article class="project-card reveal" data-category="web">
-              <div class="project-slider">
-                <span
-                  class="project-status project-status--progress"
-                  data-i18n="projectInProgress"
-                  >En cours</span
-                >
-                <div class="project-slider__track">
-                  <img
-                    src="images/imagee.png"
-                    alt="Recherche et filtrage de restaurants"
-                    loading="lazy"
-                  />
-                </div>
-                <button
-                  class="project-slider__btn project-slider__btn--prev"
-                  type="button"
-                  aria-label="Image précédente"
-                >
-                  ‹
-                </button>
-                <button
-                  class="project-slider__btn project-slider__btn--next"
-                  type="button"
-                  aria-label="Image suivante"
-                >
-                  ›
-                </button>
-                <div class="project-slider__dots"></div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-content-top">
-                  <p class="project-kicker">Web · Carte interactive</p>
-                  <h3 class="project-title">
-                    Recherche et filtrage de restaurants
-                  </h3>
-                </div>
-
-                <p class="project-description">
-                  Interface de recherche avec carte interactive, filtres
-                  avancés, géolocalisation et affichage des restaurants selon
-                  les préférences utilisateur.
-                </p>
-
-                <div class="project-techs">
-                  <div class="project-tech-icon" title="JavaScript">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                      alt="JavaScript"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-tech-icon" title="Maps">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z"
-                      />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                </div>
-
-                <div class="project-footer">
-                  <div class="project-actions">
-                    <a
-                      href="#"
-                      class="project-action-btn project-action-btn--demo"
-                      aria-label="Démo"
-                      title="Démo"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        stroke="none"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </a>
-                    <a
-                      href="https://github.com/cherkaniyahya4-hub"
-                      class="project-action-btn project-action-btn--github"
-                      aria-label="GitHub"
-                      title="GitHub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- ============== Projet 5 : Profsswap ============== -->
-            <article class="project-card reveal" data-category="app">
-              <div class="project-slider">
-                <span
-                  class="project-status project-status--progress"
-                  data-i18n="projectInProgress"
-                  >En cours</span
-                >
-                <div class="project-slider__track">
-                  <img
-                    src="images/imagee.png"
-                    alt="Profsswap mobile app"
-                    loading="lazy"
-                  />
-                </div>
-                <button
-                  class="project-slider__btn project-slider__btn--prev"
-                  type="button"
-                  aria-label="Image précédente"
-                >
-                  ‹
-                </button>
-                <button
-                  class="project-slider__btn project-slider__btn--next"
-                  type="button"
-                  aria-label="Image suivante"
-                >
-                  ›
-                </button>
-                <div class="project-slider__dots"></div>
-              </div>
-
-              <div class="project-content">
-                <div class="project-content-top">
-                  <p class="project-kicker">Mobile App</p>
-                  <h3 class="project-title">Profsswap</h3>
-                </div>
-
-                <p class="project-description">
-                  Application mobile dédiée aux échanges entre professeurs
-                  d’université, avec une interface simple, rapide et adaptée à
-                  la gestion académique.
-                </p>
-
-                <div class="project-techs">
-                  <div class="project-tech-icon" title="React Native">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                      alt="React Native"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div class="project-tech-icon" title="Firebase">
-                    <img
-                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
-                      alt="Firebase"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-
-                <div class="project-footer">
-                  <div class="project-actions">
-                    <a
-                      href="#"
-                      class="project-action-btn project-action-btn--demo"
-                      aria-label="Démo"
-                      title="Démo"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        stroke="none"
-                      >
-                        <polygon points="5 3 19 12 5 21 5 3" />
-                      </svg>
-                    </a>
-                    <a
-                      href="https://github.com/cherkaniyahya4-hub"
-                      class="project-action-btn project-action-btn--github"
-                      aria-label="GitHub"
-                      title="GitHub"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="projects__more reveal">
-            <a
-              href="https://github.com/cherkaniyahya4-hub"
-              target="_blank"
-              rel="noopener"
-              class="more-link"
-            >
-              Voir plus sur GitHub
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M7 17L17 7M7 7h10v10" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= EDUCATION ================= -->
-      <section class="section" id="education">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">05</span>
-            <h2 class="section__title">Formation</h2>
-            <p class="section__sub">Mon parcours académique.</p>
-          </div>
-
-          <div class="timeline">
-            <article class="timeline-item reveal">
-              <div class="timeline-item__marker"></div>
-              <div class="timeline-item__content">
-                <div class="timeline-item__meta">
-                  <span class="timeline-item__date">2024 — Présent</span>
-                  <span class="timeline-item__type">En cours</span>
-                </div>
-                <h3 class="timeline-item__title">
-                  BTS — Développement Web &amp; Applications
-                </h3>
-                <p class="timeline-item__place">
-                  Brevet de Technicien Supérieur
-                </p>
-                <p class="timeline-item__desc">
-                  Formation approfondie en développement full-stack :
-                  architecture logicielle, bases de données, réseaux, frameworks
-                  web modernes et méthodologies agiles.
-                </p>
-              </div>
-            </article>
-
-            <article class="timeline-item reveal">
-              <div class="timeline-item__marker"></div>
-              <div class="timeline-item__content">
-                <div class="timeline-item__meta">
-                  <span class="timeline-item__date">Avant 2024</span>
-                  <span class="timeline-item__type">Diplôme</span>
-                </div>
-                <h3 class="timeline-item__title">Baccalauréat</h3>
-                <p class="timeline-item__place">Sciences &amp; Technologies</p>
-                <p class="timeline-item__desc">
-                  Fondations solides en mathématiques, sciences et logique —
-                  socle indispensable pour une carrière dans le développement
-                  logiciel.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= CERTIFICATIONS ================= -->
-      <section class="section" id="certifications">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">06</span>
-            <h2 class="section__title">Certifications</h2>
-            <p class="section__sub">
-              Validations &amp; accréditations professionnelles.
-            </p>
-          </div>
-
-          <div class="empty-state reveal">
-            <div class="empty-state__icon" aria-hidden="true">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="8" r="6" />
-                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-              </svg>
-            </div>
-            <h3 class="empty-state__title">Certifications à venir</h3>
-            <p class="empty-state__text">
-              Je suis actuellement en préparation de plusieurs certifications
-              techniques. Cette section sera mise à jour prochainement.
-            </p>
-            <span class="empty-state__tag">En cours</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= CONTACT ================= -->
-      <section class="section section--contact" id="contact">
-        <div class="container">
-          <div class="section__head reveal">
-            <span class="section__index">07</span>
-            <h2 class="section__title">Contact</h2>
-            <p class="section__sub">Un projet en tête ? Parlons-en.</p>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card reveal">
-              <div class="contact-icon contact-icon--email">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-                  />
-                </svg>
-              </div>
-              <h3 class="contact-title">Email</h3>
-              <p class="contact-value">cherkaniyahya4@gmail.com</p>
-              <a href="mailto:cherkaniyahya4@gmail.com" class="contact-btn"
-                >Write me <span>→</span></a
-              >
-            </div>
-
-            <div class="contact-card reveal">
-              <div class="contact-icon contact-icon--whatsapp">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
-                  />
-                </svg>
-              </div>
-              <h3 class="contact-title">Whatsapp</h3>
-              <p class="contact-value">+212 6 11 34 65 44</p>
-              <a
-                href="https://wa.me/212611346544"
-                target="_blank"
-                rel="noopener"
-                class="contact-btn"
-                >Write me <span>→</span></a
-              >
-            </div>
-
-            <div class="contact-card reveal">
-              <div class="contact-icon contact-icon--linkedin">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.73C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </div>
-              <h3 class="contact-title">LinkedIn</h3>
-              <p class="contact-value">Yahya Cherkani</p>
-              <a
-                href="https://www.linkedin.com/in/yahyacherkani/"
-                target="_blank"
-                rel="noopener"
-                class="contact-btn"
-                >Write me <span>→</span></a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__brand">
-          <svg
-            class="logo__mark"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden="true"
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero section" id="home">
+    <div class="container hero__inner">
+      <div class="hero-layout reveal">
+        <!-- Socials -->
+        <div class="hero-socials">
+          <a
+            href="https://www.linkedin.com/in/yahyacherkani/"
+            target="_blank"
+            rel="noopener"
+            class="hero-social-link"
+            aria-label="LinkedIn"
           >
-            <path d="M12 2 L22 20 H2 Z" />
-          </svg>
-          <span>Yahya Cherkani</span>
-        </div>
-
-        <p class="footer__copy">
-          © <span id="year">2026</span> — Conçu &amp; développé avec passion.
-        </p>
-
-        <div class="footer__socials">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.22 0z"
+              />
+            </svg>
+          </a>
           <a
             href="https://github.com/cherkaniyahya4-hub"
             target="_blank"
             rel="noopener"
+            class="hero-social-link"
             aria-label="GitHub"
           >
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -1644,18 +137,10 @@
             </svg>
           </a>
           <a
-            href="https://www.linkedin.com/in/yahyacherkani/"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn"
+            href="mailto:cherkaniyahya4@gmail.com"
+            class="hero-social-link"
+            aria-label="Email"
           >
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path
-                d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.22 0z"
-              />
-            </svg>
-          </a>
-          <a href="mailto:cherkaniyahya4@gmail.com" aria-label="Email">
             <svg
               viewBox="0 0 24 24"
               fill="none"
@@ -1663,16 +148,1484 @@
               stroke-width="1.8"
               stroke-linecap="round"
               stroke-linejoin="round"
-              aria-hidden="true"
             >
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m22 7-10 6L2 7" />
             </svg>
           </a>
         </div>
-      </div>
-    </footer>
 
-    <script src="javascript/script.js"></script>
-  </body>
-</html>
+        <!-- Content -->
+        <div class="hero-main">
+          <h1 class="hero-title">
+            <span class="line">Yahya</span>
+            <span class="line accent">Cherkani.</span>
+          </h1>
+
+          <p class="hero-role">
+            <span class="role-line"></span>
+            <span>Développeur Full-Stack · Étudiant en BTS</span>
+          </p>
+
+          <p class="hero-desc">
+            Je conçois des applications web modernes et performantes, avec une
+            attention particulière portée à la structure du code, à l'expérience
+            utilisateur et à l'amélioration continue.
+          </p>
+
+          <div class="hero-stack">
+            <span class="hero-stack-title">Stack</span>
+            <span class="hero-stack-separator">|</span>
+            <div class="hero-stack-icons">
+              <div class="hero-stack-icon" title="React">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-stack-icon" title="FastAPI">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                  alt="FastAPI"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-stack-icon" title="Supabase">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                  alt="Supabase"
+                  loading="lazy"
+                />
+              </div>
+              <div class="hero-stack-icon" title="Cloud">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M18.42 9.22a6.003 6.003 0 0 0-11.38 0 4.5 4.5 0 0 0 .46 8.98h.5v-.01h10a4.5 4.5 0 0 0 .42-8.97z"
+                  />
+                </svg>
+              </div>
+              <div class="hero-stack-icon" title="MySQL">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                  alt="MySQL"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo -->
+        <div class="hero-photo-wrapper">
+          <img
+            src="images/yahyaa.jpeg"
+            alt="Portrait de Yahya Cherkani"
+            class="hero-photo"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Défiler vers le bas">
+      <span>scroll</span>
+      <span class="scroll-indicator__line"></span>
+    </a>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">01</span>
+        <h2 class="section__title">À propos</h2>
+        <p class="section__sub">Passion &amp; expertise.</p>
+      </div>
+
+      <div class="about">
+        <div class="about__media reveal">
+          <div class="about__photo">
+            <img
+              src="https://cherkani.netlify.app/yahyaa.jpeg"
+              alt="Portrait de Yahya Cherkani"
+              loading="lazy"
+            />
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-dot"></span>
+            Disponible · Temps plein
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="about__text reveal">
+            Développeur full-stack en formation, passionné par la création
+            d’applications web modernes et le développement de solutions
+            numériques performantes. Je porte une attention particulière à la
+            conception de projets bien structurés et à l’amélioration continue
+            de mes compétences en génie logiciel.
+          </p>
+          <p class="about__text reveal">
+            Technicien logiciel spécialisé dans le développement d’applications
+            cloud et de systèmes de surveillance. Expertise en FastAPI et
+            architecture robuste.
+          </p>
+
+          <div class="stats">
+            <div class="stat reveal">
+              <div class="stat__value">1<span>an</span></div>
+              <div class="stat__label">d’expérience</div>
+            </div>
+            <div class="stat reveal">
+              <div class="stat__value">9<span>+</span></div>
+              <div class="stat__label">projets réalisés</div>
+            </div>
+            <div class="stat reveal">
+              <div class="stat__value">∞</div>
+              <div class="stat__label">curiosité</div>
+            </div>
+          </div>
+
+          <a
+            class="btn btn--primary reveal"
+            href="https://cherkani.netlify.app/cherkani.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            Télécharger le CV
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">02</span>
+        <h2 class="section__title">Expérience</h2>
+        <p class="section__sub">Parcours professionnel &amp; missions.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2024 — Présent</span>
+              <span class="timeline-item__type">Formation</span>
+            </div>
+            <h3 class="timeline-item__title">
+              Étudiant en BTS · Développement Full-Stack
+            </h3>
+            <p class="timeline-item__place">
+              BTS — Développement Web &amp; Applications
+            </p>
+            <p class="timeline-item__desc">
+              Conception et développement d’applications web modernes :
+              front-end (HTML/CSS/JS, React), back-end (PHP, FastAPI, C#), bases
+              de données (MySQL, SQL Server) et méthodes agiles.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2024</span>
+              <span class="timeline-item__type">Projet</span>
+            </div>
+            <h3 class="timeline-item__title">
+              Technicien logiciel · Applications cloud
+            </h3>
+            <p class="timeline-item__place">
+              Projets personnels &amp; académiques
+            </p>
+            <p class="timeline-item__desc">
+              Développement d’applications cloud et de systèmes de surveillance.
+              Expertise en FastAPI, architecture robuste et traçabilité des
+              données.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">03</span>
+        <h2 class="section__title">Compétences</h2>
+        <p class="section__sub">Ma boîte à outils technique.</p>
+      </div>
+
+      <!-- Languages -->
+      <div class="skills-category reveal">
+        <h3 class="skills-category-title" data-category="languages">
+          <span>Languages</span>
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Python</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Java</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">JavaScript</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">C</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">PHP</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">C#</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="skills-category reveal">
+        <h3 class="skills-category-title" data-category="frontend">
+          <span>Frontend</span>
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">HTML5</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">CSS3</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">React</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Tailwind CSS</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Bootstrap</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Vite</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skills-category reveal">
+        <h3 class="skills-category-title" data-category="backend">
+          <span>Backend</span>
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">FastAPI</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <svg
+                class="skill-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                />
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                />
+              </svg>
+            </div>
+            <span class="skill-name">REST APIs</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <svg
+                class="skill-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2" y="2" width="9" height="9" rx="1" />
+                <rect x="13" y="2" width="9" height="9" rx="1" />
+                <rect x="2" y="13" width="9" height="9" rx="1" />
+                <rect x="13" y="13" width="9" height="9" rx="1" />
+              </svg>
+            </div>
+            <span class="skill-name">Microservices</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Spring Boot</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Node.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Express.js</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">GraphQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skills-category reveal">
+        <h3 class="skills-category-title" data-category="databases">
+          <span>Databases</span>
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Oracle DB</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">MySQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">MongoDB</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <svg
+                class="skill-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <ellipse cx="12" cy="5" rx="9" ry="3" />
+                <path d="M3 5v14a9 3 0 0 0 18 0V5" />
+                <path d="M3 12a9 3 0 0 0 18 0" />
+              </svg>
+            </div>
+            <span class="skill-name">SQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <svg
+                class="skill-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </div>
+            <span class="skill-name">PL/SQL</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Redis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DevOps & Cloud -->
+      <div class="skills-category reveal">
+        <h3 class="skills-category-title" data-category="devops">
+          <span>DevOps &amp; Cloud</span>
+        </h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">OCI</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Docker</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Kubernetes</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">CI/CD</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">Git</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <svg
+                class="skill-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <span class="skill-name">System Design</span>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-box">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                alt=""
+                class="skill-icon"
+                loading="lazy"
+              />
+            </div>
+            <span class="skill-name">GCP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">04</span>
+        <h2 class="section__title">Projets</h2>
+        <p class="section__sub">Réalisations récentes &amp; études de cas.</p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="project-filters reveal">
+        <button class="project-filter-btn is-active" data-filter="all">
+          All
+        </button>
+        <button class="project-filter-btn" data-filter="web">Web</button>
+        <button class="project-filter-btn" data-filter="app">App</button>
+        <button class="project-filter-btn" data-filter="desktop">
+          Desktop
+        </button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- ============== Projet 1 : Eco Tracker ============== -->
+        <article
+          class="project-card project-card--ecotracker reveal"
+          data-category="web"
+        >
+          <!-- Slider Eco Tracker (PAS de badge "En cours" — projet live) -->
+          <div class="project-slider project-slider--eco">
+            <div class="project-slider__viewport">
+              <div class="project-slider__track">
+                <img
+                  src="images/1.png"
+                  alt="Eco Tracker - page principale"
+                  loading="lazy"
+                />
+                <img
+                  src="images/2.png"
+                  alt="Eco Tracker - dashboard"
+                  loading="lazy"
+                />
+                <img
+                  src="images/eco.png"
+                  alt="Eco Tracker - vue responsive"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <button
+              class="project-slider__btn project-slider__btn--prev"
+              type="button"
+              aria-label="Image précédente"
+            >
+              ‹
+            </button>
+
+            <button
+              class="project-slider__btn project-slider__btn--next"
+              type="button"
+              aria-label="Image suivante"
+            >
+              ›
+            </button>
+
+            <div
+              class="project-slider__dots"
+              aria-label="Navigation du slider"
+            ></div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="project-content">
+            <div class="project-content-top">
+              <p class="project-kicker">WEB APP / DASHBOARD</p>
+              <h3 class="project-title">Eco Tracker</h3>
+            </div>
+
+            <p class="project-description">
+              Eco Tracker est une application web moderne permettant de suivre
+              et visualiser son impact écologique. Le site propose une interface
+              claire, responsive et professionnelle avec une expérience
+              utilisateur simple et orientée données.
+            </p>
+
+            <div class="project-techs" aria-label="Technologies utilisées">
+              <div class="project-tech-icon" title="HTML5">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                  alt="HTML5"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-tech-icon" title="CSS3">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                  alt="CSS3"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-tech-icon" title="JavaScript">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="project-tech-icon" title="Supabase">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                  alt="Supabase"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-actions">
+                <a
+                  href="https://ecotracker-mvp.vercel.app"
+                  class="project-action-btn project-action-btn--live"
+                  aria-label="Voir le site Eco Tracker"
+                  title="Live Demo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    stroke="none"
+                    aria-hidden="true"
+                  >
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </a>
+
+                <span
+                  class="project-action-btn project-action-btn--disabled"
+                  aria-label="Code bientôt disponible"
+                  title="Code bientôt disponible"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============== Projet 2 : Music Sync ============== -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-slider">
+            <span
+              class="project-status project-status--progress"
+              data-i18n="projectInProgress"
+              >En cours</span
+            >
+            <div class="project-slider__track">
+              <img
+                src="images/imagee.png"
+                alt="Real-time Music Sync interface"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="project-slider__btn project-slider__btn--prev"
+              type="button"
+              aria-label="Image précédente"
+            >
+              ‹
+            </button>
+            <button
+              class="project-slider__btn project-slider__btn--next"
+              type="button"
+              aria-label="Image suivante"
+            >
+              ›
+            </button>
+            <div class="project-slider__dots"></div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-content-top">
+              <p class="project-kicker">Web App · Realtime</p>
+              <h3 class="project-title">
+                Real-time Music Sync with Friends &amp; Chat
+              </h3>
+            </div>
+
+            <p class="project-description">
+              Application collaborative en temps réel avec lecture musicale
+              synchronisée, chat live, files d’attente partagées et interface
+              moderne orientée expérience utilisateur.
+            </p>
+
+            <div class="project-techs">
+              <div class="project-tech-icon" title="React">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-tech-icon" title="Supabase">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+                  alt="Supabase"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-actions">
+                <a
+                  href="#"
+                  class="project-action-btn project-action-btn--video"
+                  aria-label="Vidéo de démo"
+                  title="Démo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/cherkaniyahya4-hub"
+                  class="project-action-btn project-action-btn--github"
+                  aria-label="Voir le code sur GitHub"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============== Projet 3 : Faculté de Médecine ============== -->
+        <article class="project-card reveal" data-category="app">
+          <div class="project-slider">
+            <span
+              class="project-status project-status--progress"
+              data-i18n="projectInProgress"
+              >En cours</span
+            >
+            <div class="project-slider__track">
+              <img
+                src="images/imagee.png"
+                alt="Gestion de la faculté de médecine"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="project-slider__btn project-slider__btn--prev"
+              type="button"
+              aria-label="Image précédente"
+            >
+              ‹
+            </button>
+            <button
+              class="project-slider__btn project-slider__btn--next"
+              type="button"
+              aria-label="Image suivante"
+            >
+              ›
+            </button>
+            <div class="project-slider__dots"></div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-content-top">
+              <p class="project-kicker">Mobile · Web App</p>
+              <h3 class="project-title">Gestion de la faculté de médecine</h3>
+            </div>
+
+            <p class="project-description">
+              Plateforme web et mobile pour organiser les annonces, devoirs,
+              ressources pédagogiques et échanges entre professeurs et
+              étudiants.
+            </p>
+
+            <div class="project-techs">
+              <div class="project-tech-icon" title="React">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-tech-icon" title="Java">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                  alt="Java"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-tech-icon" title="Spring Boot">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                  alt="Spring Boot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-actions">
+                <a
+                  href="#"
+                  class="project-action-btn project-action-btn--live"
+                  aria-label="Démo live"
+                  title="Live"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/cherkaniyahya4-hub"
+                  class="project-action-btn project-action-btn--github"
+                  aria-label="GitHub"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============== Projet 4 : Restaurants ============== -->
+        <article class="project-card reveal" data-category="web">
+          <div class="project-slider">
+            <span
+              class="project-status project-status--progress"
+              data-i18n="projectInProgress"
+              >En cours</span
+            >
+            <div class="project-slider__track">
+              <img
+                src="images/imagee.png"
+                alt="Recherche et filtrage de restaurants"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="project-slider__btn project-slider__btn--prev"
+              type="button"
+              aria-label="Image précédente"
+            >
+              ‹
+            </button>
+            <button
+              class="project-slider__btn project-slider__btn--next"
+              type="button"
+              aria-label="Image suivante"
+            >
+              ›
+            </button>
+            <div class="project-slider__dots"></div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-content-top">
+              <p class="project-kicker">Web · Carte interactive</p>
+              <h3 class="project-title">
+                Recherche et filtrage de restaurants
+              </h3>
+            </div>
+
+            <p class="project-description">
+              Interface de recherche avec carte interactive, filtres avancés,
+              géolocalisation et affichage des restaurants selon les préférences
+              utilisateur.
+            </p>
+
+            <div class="project-techs">
+              <div class="project-tech-icon" title="JavaScript">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                  alt="JavaScript"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-tech-icon" title="Maps">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-actions">
+                <a
+                  href="#"
+                  class="project-action-btn project-action-btn--demo"
+                  aria-label="Démo"
+                  title="Démo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/cherkaniyahya4-hub"
+                  class="project-action-btn project-action-btn--github"
+                  aria-label="GitHub"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ============== Projet 5 : Profsswap ============== -->
+        <article class="project-card reveal" data-category="app">
+          <div class="project-slider">
+            <span
+              class="project-status project-status--progress"
+              data-i18n="projectInProgress"
+              >En cours</span
+            >
+            <div class="project-slider__track">
+              <img
+                src="images/imagee.png"
+                alt="Profsswap mobile app"
+                loading="lazy"
+              />
+            </div>
+            <button
+              class="project-slider__btn project-slider__btn--prev"
+              type="button"
+              aria-label="Image précédente"
+            >
+              ‹
+            </button>
+            <button
+              class="project-slider__btn project-slider__btn--next"
+              type="button"
+              aria-label="Image suivante"
+            >
+              ›
+            </button>
+            <div class="project-slider__dots"></div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-content-top">
+              <p class="project-kicker">Mobile App</p>
+              <h3 class="project-title">Profsswap</h3>
+            </div>
+
+            <p class="project-description">
+              Application mobile dédiée aux échanges entre professeurs
+              d’université, avec une interface simple, rapide et adaptée à la
+              gestion académique.
+            </p>
+
+            <div class="project-techs">
+              <div class="project-tech-icon" title="React Native">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                  alt="React Native"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-tech-icon" title="Firebase">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+                  alt="Firebase"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-actions">
+                <a
+                  href="#"
+                  class="project-action-btn project-action-btn--demo"
+                  aria-label="Démo"
+                  title="Démo"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/cherkaniyahya4-hub"
+                  class="project-action-btn project-action-btn--github"
+                  aria-label="GitHub"
+                  title="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="projects__more reveal">
+        <a
+          href="https://github.com/cherkaniyahya4-hub"
+          target="_blank"
+          rel="noopener"
+          class="more-link"
+        >
+          Voir plus sur GitHub
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M7 17L17 7M7 7h10v10" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">05</span>
+        <h2 class="section__title">Formation</h2>
+        <p class="section__sub">Mon parcours académique.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">2024 — Présent</span>
+              <span class="timeline-item__type">En cours</span>
+            </div>
+            <h3 class="timeline-item__title">
+              BTS — Développement Web &amp; Applications
+            </h3>
+            <p class="timeline-item__place">Brevet de Technicien Supérieur</p>
+            <p class="timeline-item__desc">
+              Formation approfondie en développement full-stack : architecture
+              logicielle, bases de données, réseaux, frameworks web modernes et
+              méthodologies agiles.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-item__marker"></div>
+          <div class="timeline-item__content">
+            <div class="timeline-item__meta">
+              <span class="timeline-item__date">Avant 2024</span>
+              <span class="timeline-item__type">Diplôme</span>
+            </div>
+            <h3 class="timeline-item__title">Baccalauréat</h3>
+            <p class="timeline-item__place">Sciences &amp; Technologies</p>
+            <p class="timeline-item__desc">
+              Fondations solides en mathématiques, sciences et logique — socle
+              indispensable pour une carrière dans le développement logiciel.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATIONS ================= -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">06</span>
+        <h2 class="section__title">Certifications</h2>
+        <p class="section__sub">
+          Validations &amp; accréditations professionnelles.
+        </p>
+      </div>
+
+      <div class="empty-state reveal">
+        <div class="empty-state__icon" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+        </div>
+        <h3 class="empty-state__title">Certifications à venir</h3>
+        <p class="empty-state__text">
+          Je suis actuellement en préparation de plusieurs certifications
+          techniques. Cette section sera mise à jour prochainement.
+        </p>
+        <span class="empty-state__tag">En cours</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section--contact" id="contact">
+    <div class="container">
+      <div class="section__head reveal">
+        <span class="section__index">07</span>
+        <h2 class="section__title">Contact</h2>
+        <p class="section__sub">Un projet en tête ? Parlons-en.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card reveal">
+          <div class="contact-icon contact-icon--email">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+              />
+            </svg>
+          </div>
+          <h3 class="contact-title">Email</h3>
+          <p class="contact-value">cherkaniyahya4@gmail.com</p>
+          <a href="mailto:cherkaniyahya4@gmail.com" class="contact-btn"
+            >Write me <span>→</span></a
+          >
+        </div>
+
+        <div class="contact-card reveal">
+          <div class="contact-icon contact-icon--whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+              />
+            </svg>
+          </div>
+          <h3 class="contact-title">Whatsapp</h3>
+          <p class="contact-value">+212 6 11 34 65 44</p>
+          <a
+            href="https://wa.me/212611346544"
+            target="_blank"
+            rel="noopener"
+            class="contact-btn"
+            >Write me <span>→</span></a
+          >
+        </div>
+
+        <div class="contact-card reveal">
+          <div class="contact-icon contact-icon--linkedin">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.73C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </div>
+          <h3 class="contact-title">LinkedIn</h3>
+          <p class="contact-value">Yahya Cherkani</p>
+          <a
+            href="https://www.linkedin.com/in/yahyacherkani/"
+            target="_blank"
+            rel="noopener"
+            class="contact-btn"
+            >Write me <span>→</span></a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <svg
+        class="logo__mark"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M12 2 L22 20 H2 Z" />
+      </svg>
+      <span>Yahya Cherkani</span>
+    </div>
+
+    <p class="footer__copy">
+      © <span id="year">2026</span> — Conçu &amp; développé avec passion.
+    </p>
+
+    <div class="footer__socials">
+      <a
+        href="https://github.com/cherkaniyahya4-hub"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.92.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.23-1.28-5.23-5.67 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.73 0c2.19-1.48 3.15-1.17 3.15-1.17.63 1.58.23 2.75.11 3.04.73.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.37-5.25 5.66.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .3.21.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/yahyacherkani/"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+      >
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.2 0 22.22 0z"
+          />
+        </svg>
+      </a>
+      <a href="mailto:cherkaniyahya4@gmail.com" aria-label="Email">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-10 6L2 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="javascript/script.js"></script>
