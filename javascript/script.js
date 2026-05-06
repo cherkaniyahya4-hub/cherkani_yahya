@@ -97,13 +97,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       experienceTitle: "Expérience",
       experienceSub: "Parcours professionnel & missions.",
-      exp1Date: "2024 — Présent",
+      exp1Date: "2026 — Présent",
       exp1Type: "Formation",
       exp1Title: "Étudiant en BTS · Développement Full-Stack",
       exp1Place: "BTS — Développement Web & Applications",
       exp1Desc:
         "Conception et développement d’applications web modernes : front-end (HTML/CSS/JS, React), back-end (PHP, FastAPI, C#), bases de données (MySQL, SQL Server) et méthodes agiles.",
-      exp2Date: "2024",
+      exp2Date: "2025",
       exp2Type: "Projet",
       exp2Title: "Technicien logiciel · Applications cloud",
       exp2Place: "Projets personnels & académiques",
@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       educationTitle: "Formation",
       educationSub: "Mon parcours académique.",
-      edu1Date: "2024 — Présent",
+      edu1Date: "2026 — Présent",
       edu1Type: "En cours",
       edu1Title: "BTS — Développement Web & Applications",
       edu1Place: "Brevet de Technicien Supérieur",
@@ -230,13 +230,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       experienceTitle: "Experience",
       experienceSub: "Professional background & missions.",
-      exp1Date: "2024 — Present",
+      exp1Date: "2026 — Present",
       exp1Type: "Training",
       exp1Title: "BTS Student · Full-Stack Development",
       exp1Place: "BTS — Web & Application Development",
       exp1Desc:
         "Design and development of modern web applications: front-end (HTML/CSS/JS, React), back-end (PHP, FastAPI, C#), databases (MySQL, SQL Server), and agile methods.",
-      exp2Date: "2024",
+      exp2Date: "2025",
       exp2Type: "Project",
       exp2Title: "Software Technician · Cloud Applications",
       exp2Place: "Personal & academic projects",
@@ -295,13 +295,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       educationTitle: "Education",
       educationSub: "My academic background.",
-      edu1Date: "2024 — Present",
+      edu1Date: "2026 — Present",
       edu1Type: "Ongoing",
       edu1Title: "BTS — Web & Application Development",
       edu1Place: "Higher Technician Certificate",
       edu1Desc:
         "In-depth training in full-stack development: software architecture, databases, networks, modern web frameworks, and agile methodologies.",
-      edu2Date: "Before 2024",
+      edu2Date: "Before 2025",
       edu2Type: "Degree",
       edu2Title: "Baccalaureate",
       edu2Place: "Science & Technology",
