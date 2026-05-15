@@ -281,7 +281,7 @@ function initThemeToggle() {
     if (metaTheme) {
       metaTheme.setAttribute(
         "content",
-        safe === "light" ? "#f8fafc" : "#010409",
+        safe === "light" ? "#FFFFFF" : "#000000",
       );
     }
   };
